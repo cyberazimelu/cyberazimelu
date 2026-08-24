@@ -82,3 +82,14 @@ An overly permissive rule can increase the attack surface in scenarios where an 
 This does not by itself demonstrate unauthorized database access or compromise. Rather, it represents a weakened network access-control boundary that could provide an additional pathway for unauthorized systems to attempt communication with the database service.
 
 The finding therefore highlighted the importance of applying least-privilege principles to network access controls and restricting database services to legitimate, authorized sources.
+---
+
+## Remediation
+
+I advised the organization's security team on the identified access-control weakness and worked with them during the remediation process.
+
+The relevant firewall ACL was reviewed and updated to remove the unnecessarily broad `0.0.0.0/0` source range and restrict access to authorized sources in accordance with the organization's security requirements.
+
+The remediation was intended to reduce unnecessary network exposure of the MySQL service and align network access with least-privilege principles.
+
+The organization also addressed access-control requirements at the authorization layer according to its internal security policies.
