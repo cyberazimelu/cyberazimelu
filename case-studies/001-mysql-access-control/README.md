@@ -161,8 +161,7 @@ The finding was primarily a violation of the principle of **least privilege** at
 A sensitive service should only be reachable from the systems, networks, or sources that have a legitimate operational requirement to communicate with it.
 
 Conceptually:
-
-`**Overly Permissive**
+**Overly Permissive**
 
 ```text
 0.0.0.0/0
@@ -191,3 +190,5 @@ AUTHORIZED SOURCES
         ▼
       MySQL
 ```
+
+
