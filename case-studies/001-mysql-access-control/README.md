@@ -111,7 +111,7 @@ This assessment did not demonstrate unauthorized database access or compromise.
 Instead, the finding identified a weakened network access-control boundary that could provide an additional pathway for unauthorized systems to attempt communication with the service.
 
 ---
-
+![ACL Before vs After — Conceptual / Sanitized](./ACL%20Before%20vs%20After.jpeg)
 ## Security Principle
 
 The finding primarily concerned the principle of **least privilege** at the network access-control layer.
