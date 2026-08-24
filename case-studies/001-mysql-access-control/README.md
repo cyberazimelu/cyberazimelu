@@ -93,3 +93,14 @@ The relevant firewall ACL was reviewed and updated to remove the unnecessarily b
 The remediation was intended to reduce unnecessary network exposure of the MySQL service and align network access with least-privilege principles.
 
 The organization also addressed access-control requirements at the authorization layer according to its internal security policies.
+---
+
+## Retesting & Validation
+
+Following the remediation, I retested the relevant access-control configuration.
+
+The retest confirmed that the previously identified overly permissive firewall rule had been fixed.
+
+This provided evidence that the specific access-control weakness identified during the assessment had been remediated.
+
+The retest was limited to validating the identified firewall access-control issue and does not constitute a full security assessment of the environment.
