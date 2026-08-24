@@ -39,7 +39,7 @@ The finding was an overly permissive network access-control configuration becaus
 I advised the organization's security team and worked with them during remediation. Following the changes, I retested the relevant access-control configuration and confirmed that the identified rule had been fixed.
 
 ---
-
+![VAPT Investigation Flow](./Investigation%20Flow.jpeg)
 ## Investigation Methodology
 
 The investigation followed this sequence:
