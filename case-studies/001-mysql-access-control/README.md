@@ -69,3 +69,16 @@ During the assessment, I:
 - Confirmed that the identified overly permissive firewall rule had been fixed.
 
 The organization's security team determined and implemented the final remediation according to its internal security requirements and change-management processes.
+---
+
+## Security Impact
+
+The identified firewall rule allowed traffic to the MySQL service from an unrestricted IPv4 source range.
+
+The primary security concern was the unnecessary network exposure of a sensitive database service.
+
+An overly permissive rule can increase the attack surface in scenarios where an attacker has already obtained access to a network location from which the service is reachable, including through a compromised internal host or malicious insider activity.
+
+This does not by itself demonstrate unauthorized database access or compromise. Rather, it represents a weakened network access-control boundary that could provide an additional pathway for unauthorized systems to attempt communication with the database service.
+
+The finding therefore highlighted the importance of applying least-privilege principles to network access controls and restricting database services to legitimate, authorized sources.
