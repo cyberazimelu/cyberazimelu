@@ -187,3 +187,22 @@ AUTHORIZED SOURCES
         │
         ▼
       MySQL
+---
+
+## Tools Used
+
+### Network Reconnaissance
+
+- Nmap
+
+### Host-Level Verification
+
+- `ss` — Linux socket and listening-service inspection
+
+### Access-Control Analysis
+
+- Firewall ACL configuration review
+
+### Service
+
+- MySQL
