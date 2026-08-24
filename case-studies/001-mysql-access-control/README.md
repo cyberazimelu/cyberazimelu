@@ -132,3 +132,23 @@ Rather than treating the absence of a clear Nmap identification as evidence that
 
 ```bash
 sudo ss -lntp | grep 3306
+---
+
+## Finding
+
+### Overly Permissive Firewall Access Control
+
+**Affected Service:** MySQL  
+**Protocol:** TCP  
+**Port:** 3306  
+**Source:** `0.0.0.0/0`  
+**Action:** ALLOW  
+**Category:** Network Access Control
+
+The firewall ACL permitted traffic to the MySQL service from `0.0.0.0/0`, representing all IPv4 source addresses.
+
+The security concern was the absence of a sufficiently restricted source range for a sensitive database service.
+
+The finding was therefore classified as an overly permissive network access-control configuration rather than a vulnerability in the MySQL software itself.
+
+The actual risk depends on the surrounding network architecture, service exposure, authentication controls, database sensitivity, and other compensating security controls.
