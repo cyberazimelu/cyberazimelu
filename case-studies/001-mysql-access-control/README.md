@@ -206,3 +206,14 @@ AUTHORIZED SOURCES
 ### Service
 
 - MySQL
+---
+
+## Outcome
+
+The identified overly permissive firewall ACL was remediated by the organization.
+
+Following remediation, I retested the relevant access-control configuration and confirmed that the previously identified rule had been fixed.
+
+The remediation reduced unnecessary network exposure of the MySQL service and strengthened the network access-control boundary around the database service.
+
+The engagement demonstrated the value of correlating automated reconnaissance, host-level verification, and configuration review when assessing network security controls.
