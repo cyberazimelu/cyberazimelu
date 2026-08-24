@@ -29,3 +29,25 @@ sudo ss -lntp | grep 3306
 The `ss` output confirmed that a service was listening on TCP port `3306` on the assessed host.
 
 This provided a local indication that the MySQL service was listening on the host, despite the inconclusive Nmap result.
+---
+
+## Firewall ACL Discovery
+
+Following the host-level verification, I reviewed the relevant firewall access-control configuration.
+
+The review identified an ACL permitting traffic from:
+
+`0.0.0.0/0`
+
+to the MySQL service on:
+
+`TCP/3306`
+
+Conceptually:
+
+```text
+SOURCE       : 0.0.0.0/0
+DESTINATION  : MySQL
+PORT         : 3306
+PROTOCOL     : TCP
+ACTION       : ALLOW
