@@ -152,3 +152,42 @@ The security concern was the absence of a sufficiently restricted source range f
 The finding was therefore classified as an overly permissive network access-control configuration rather than a vulnerability in the MySQL software itself.
 
 The actual risk depends on the surrounding network architecture, service exposure, authentication controls, database sensitivity, and other compensating security controls.
+---
+
+## Security Principle
+
+The finding was primarily a violation of the principle of **least privilege** at the network access-control layer.
+
+A sensitive service should only be reachable from the systems, networks, or sources that have a legitimate operational requirement to communicate with it.
+
+Conceptually:
+
+`**Overly Permissive**
+
+```text
+0.0.0.0/0
+     │
+     ▼
+FIREWALL ACL
+     │
+     ▼
+TCP/3306
+     │
+     ▼
+MySQL
+```
+
+**Least Privilege**
+
+```text
+AUTHORIZED SOURCES
+        │
+        ▼
+   FIREWALL ACL
+        │
+        ▼
+    TCP/3306
+        │
+        ▼
+      MySQL
+```
