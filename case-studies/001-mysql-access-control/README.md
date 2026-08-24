@@ -156,14 +156,14 @@ The actual risk depends on the surrounding network architecture, service exposur
 
 ## Security Principle
 
-The finding was primarily a violation of the principle of **least privilege** at the network access-control layer.
+The finding was primarily a violation of the principle of least privilege at the network access-control layer.
 
 A sensitive service should only be reachable from the systems, networks, or sources that have a legitimate operational requirement to communicate with it.
 
 Conceptually:
-**Overly Permissive**
 
-```text
+Overly Permissive
+
 0.0.0.0/0
      │
      ▼
@@ -174,11 +174,9 @@ TCP/3306
      │
      ▼
 MySQL
-```
 
-**Least Privilege**
+Least Privilege
 
-```text
 AUTHORIZED SOURCES
         │
         ▼
@@ -189,6 +187,3 @@ AUTHORIZED SOURCES
         │
         ▼
       MySQL
-```
-
-
