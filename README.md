@@ -2,9 +2,9 @@ Peter Majesty Azimelu
 
 Cybersecurity Consultant & Security Researcher
 
-Penetration Testing | Application Security | VAPT
+Penetration Testing | Application Security | VAPT -
 Web • API • Cloud Security
-CISSP | CISM | CEH | Security+
+| CISSP | CISM | CEH | Security+
 Founder — PM AZIMELU TECHNOLOGIES
 
 🔐 Secure. Connect. Protect.
