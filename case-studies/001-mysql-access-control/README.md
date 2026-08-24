@@ -122,3 +122,13 @@ The investigation followed a structured network VAPT approach:
 10. Confirmation that the identified firewall rule had been fixed.
 
 The investigation demonstrates the importance of correlating network reconnaissance with host-level verification and configuration review rather than relying on a single source of evidence.
+---
+
+## Nmap Observation
+
+Nmap reconnaissance did not clearly identify the MySQL service during the assessment. The results were inconclusive and did not provide reliable service identification for TCP/3306.
+
+Rather than treating the absence of a clear Nmap identification as evidence that MySQL was not present, I performed local host-level verification using:
+
+```bash
+sudo ss -lntp | grep 3306
