@@ -104,3 +104,21 @@ The retest confirmed that the previously identified overly permissive firewall r
 This provided evidence that the specific access-control weakness identified during the assessment had been remediated.
 
 The retest was limited to validating the identified firewall access-control issue and does not constitute a full security assessment of the environment.
+---
+
+## Investigation Methodology
+
+The investigation followed a structured network VAPT approach:
+
+1. Initial observation of the MySQL connectivity issue.
+2. Authorized network reconnaissance using Nmap.
+3. Review of the inconclusive Nmap results.
+4. Host-level verification of TCP/3306 using `ss`.
+5. Review of the relevant firewall ACL configuration.
+6. Identification of the overly permissive `0.0.0.0/0` source rule.
+7. Reporting and communication of the finding to the organization's security team.
+8. Collaboration during remediation.
+9. Retesting of the relevant access-control configuration.
+10. Confirmation that the identified firewall rule had been fixed.
+
+The investigation demonstrates the importance of correlating network reconnaissance with host-level verification and configuration review rather than relying on a single source of evidence.
