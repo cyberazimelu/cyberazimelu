@@ -1,132 +1,129 @@
-Peter Majesty Azimelu
+# Peter Majesty Azimelu
 
 Cybersecurity Consultant & Security Researcher
 
-Penetration Testing | VAPT | Application Security | Network Security
-Web • API • Cloud Security
+Penetration Testing | Network VAPT | Application Security  
+Web | API | Cloud Security
 
 CISSP | CISM | CEH | Security+
 
 Founder — PM AZIMELU TECHNOLOGIES
 
-🔐 SECURE. CONNECT. PROTECT.
+SECURE. CONNECT. PROTECT.
 
-⸻
+---
 
-About Me
+## About Me
 
-I am a cybersecurity professional focused on identifying, assessing, and helping organizations address security weaknesses across modern digital environments.
+I am a cybersecurity consultant and security researcher focused on identifying, assessing, and helping organizations remediate security weaknesses across modern digital environments.
 
-My work focuses on VAPT, application security, and security research, with a practical emphasis on identifying real-world security weaknesses, understanding attack techniques, and helping organizations build more resilient digital environments.
+My work combines practical security testing, vulnerability research, structured assessment methodologies, and security-by-design principles. I focus on understanding how weaknesses arise, how they can be exploited, what evidence they leave behind, and how effective controls can reduce risk.
 
-I approach cybersecurity through practical testing, continuous research, disciplined methodology, and security-by-design principles.
+---
 
-⸻
+## Certifications & Credentials
 
-Certifications & Credentials
+- CISSP — Certified Information Systems Security Professional
+- CISM — Certified Information Security Manager
+- CEH v12 — Certified Ethical Hacker
+- CompTIA Security+
 
-* CISSP — Certified Information Systems Security Professional
-* CISM — Certified Information Security Manager
-* CEH v12 — Certified Ethical Hacker
-* CompTIA Security+
+---
 
-⸻
+## Core Security Areas
 
-Core Security Areas
+- Network Penetration Testing
+- Vulnerability Assessment & Penetration Testing (VAPT)
+- Web Application Security
+- API Security
+- Cloud Security
+- Infrastructure Security
+- Security Assessment & Hardening
+- Security Research
 
-* Penetration Testing
-* Vulnerability Assessment & Penetration Testing (VAPT)
-* Web Application Security
-* API Security
-* Cloud Security
-* Infrastructure Security
-* Security Assessment & Hardening
-* Security Research
+---
 
-⸻
+## Portfolio Scope
 
-What I’ve Built
+This GitHub profile documents and demonstrates my practical work across:
 
-I use this GitHub profile to document and demonstrate my practical work across cybersecurity, security research, software development, infrastructure, and technical experimentation.
+- Network VAPT engagements and case studies
+- Web application and API testing
+- Security research and technical investigations
+- Cybersecurity laboratories
+- Secure development projects
+- Infrastructure and cloud security
+- Technical experimentation
+- Security documentation and write-ups
 
-This includes:
+Where work involves real-world environments, sensitive information is anonymized or omitted in accordance with confidentiality requirements.
 
-* Security research
-* VAPT projects and case studies
-* Web application security testing
-* API security research
-* Cybersecurity laboratories
-* Secure development projects
-* Infrastructure and cloud security projects
-* Technical write-ups and documentation
+---
 
-⸻
+## Tools & Technologies
 
-What I Work With
+### Security & Testing
 
-Security & Testing
+- Nmap
+- Burp Suite
+- Wireshark
+- testssl.sh
+- Hping3
+- John the Ripper
+- cURL
+- Netcat
+- Other security assessment tools and technologies
 
-* Nmap
-* Burp Suite
-* Wireshark
-* testssl.sh
-* Hping3
-* John the Ripper
-* cURL
-* Netcat
-* Other security tools and technologies
+### Development & Infrastructure
 
-Development & Infrastructure
+- Linux
+- Git & GitHub
+- Python
+- JavaScript / TypeScript
+- Next.js
+- Docker
+- REST APIs
+- Cloud Infrastructure
+- Web Technologies
 
-* Linux
-* Git & GitHub
-* Python
-* JavaScript / TypeScript
-* Next.js
-* Docker
-* REST APIs
-* Cloud infrastructure
-* Web technologies
+---
 
-⸻
+## Research Areas
 
-Security Research
+My research explores the relationship between vulnerabilities, attack techniques, defensive controls, and security architecture.
 
-My security research focuses on understanding how vulnerabilities arise, how attackers can exploit weaknesses, what evidence defenders can identify, and how organizations can implement effective security controls.
+Areas include:
 
-Areas of interest include:
+- Web application vulnerabilities
+- Authentication & authorization
+- Access control
+- API security
+- Cloud misconfigurations
+- Session security
+- Email security
+- Infrastructure security
+- Security architecture
+- Attack techniques & defensive controls
 
-* Web application vulnerabilities
-* Authentication and authorization
-* Access control
-* API security
-* Cloud misconfigurations
-* Session security
-* Email security
-* Infrastructure security
-* Security architecture
-* Attack techniques and defensive controls
+---
 
-⸻
-
-Professional Focus
-
-Cybersecurity Consulting | VAPT | Application Security | Security Research
+## PM AZIMELU TECHNOLOGIES
 
 Founder — PM AZIMELU TECHNOLOGIES
 
-SECURE. CONNECT. PROTECT.
-
 PM AZIMELU TECHNOLOGIES provides cybersecurity and technology solutions focused on helping organizations secure, connect, and protect their digital environments.
 
-⸻
+SECURE. CONNECT. PROTECT.
 
-Connect
+---
 
-* GitHub: CyberAzimelu
-* Company: PM AZIMELU TECHNOLOGIES
-* Email: pmatechofficial@proton.me
+## Connect
 
-⸻
+GitHub: CyberAzimelu  
+Company: PM AZIMELU TECHNOLOGIES  
+Email: pmatechofficial@proton.me
 
-Security is not a feature added at the end. It is a discipline built into every layer.
+---
+
+> Security is not a feature added at the end. It is a discipline built into every layer.
+
