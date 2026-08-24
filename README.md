@@ -73,7 +73,11 @@ I advised the organization's security team, worked with them during remediation,
 **[View Full Case Study](./case-studies/001-mysql-access-control/)**
 
 ---
+## Security Labs
 
+Controlled cybersecurity research, laboratories, and technical experiments conducted in authorized environments.
+
+[View Security Labs](./labs/)
 ## Tools & Technologies
 
 ### Security & Testing
