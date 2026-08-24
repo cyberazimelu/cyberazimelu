@@ -51,3 +51,21 @@ DESTINATION  : MySQL
 PORT         : 3306
 PROTOCOL     : TCP
 ACTION       : ALLOW
+---
+
+## My Role
+
+During the assessment, I:
+
+- Investigated the MySQL connectivity issue.
+- Performed authorized network reconnaissance using Nmap.
+- Recognized that the Nmap results were inconclusive regarding the MySQL service.
+- Performed host-level verification using `ss`.
+- Reviewed the relevant firewall ACL configuration.
+- Identified the overly permissive `0.0.0.0/0` source rule for TCP/3306.
+- Advised the organization's security team of the security concern.
+- Worked with the organization during the remediation process.
+- Retested the environment after remediation.
+- Confirmed that the identified overly permissive firewall rule had been fixed.
+
+The organization's security team determined and implemented the final remediation according to its internal security requirements and change-management processes.
