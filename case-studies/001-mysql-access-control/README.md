@@ -26,3 +26,6 @@ Initial Nmap reconnaissance did not clearly identify the MySQL service. The scan
 
 ```bash
 sudo ss -lntp | grep 3306
+The `ss` output confirmed that a service was listening on TCP port `3306` on the assessed host.
+
+This provided a local indication that the MySQL service was listening on the host, despite the inconclusive Nmap result.
