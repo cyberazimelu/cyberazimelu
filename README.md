@@ -1,15 +1,15 @@
 # Peter Majesty Azimelu
 
-Cybersecurity Consultant & Security Researcher
+**Cybersecurity Consultant & Security Researcher**
 
 Penetration Testing | Network VAPT | Application Security  
 Web | API | Cloud Security
 
 CISSP | CISM | CEH | Security+
 
-Founder — PM AZIMELU TECHNOLOGIES
+**Founder — PM AZIMELU TECHNOLOGIES**
 
-SECURE. CONNECT. PROTECT.
+**SECURE. CONNECT. PROTECT.**
 
 ---
 
@@ -23,10 +23,10 @@ My work combines practical security testing, vulnerability research, structured 
 
 ## Certifications & Credentials
 
-- CISSP — Certified Information Systems Security Professional
-- CISM — Certified Information Security Manager
-- CEH v12 — Certified Ethical Hacker
-- CompTIA Security+
+- **CISSP** — Certified Information Systems Security Professional
+- **CISM** — Certified Information Security Manager
+- **CEH v12** — Certified Ethical Hacker
+- **CompTIA Security+**
 
 ---
 
@@ -53,10 +53,24 @@ This GitHub profile documents and demonstrates my practical work across:
 - Cybersecurity laboratories
 - Secure development projects
 - Infrastructure and cloud security
-- Technical experimentation
-- Security documentation and write-ups
+- Technical security experimentation
+- Security documentation and technical write-ups
 
 Where work involves real-world environments, sensitive information is anonymized or omitted in accordance with confidentiality requirements.
+
+---
+
+## Real-World VAPT Case Studies
+
+### VAPT Case Study #001 — MySQL Service Reachability Through Overly Permissive Firewall Access Control
+
+**Authorized Network VAPT | May 2026 | Client & Assets Anonymized**
+
+Investigated a MySQL connectivity issue where Nmap reconnaissance produced inconclusive results. Host-level verification using `ss` identified a service listening on TCP/3306, followed by firewall ACL review that revealed an unrestricted `0.0.0.0/0` source rule.
+
+I advised the organization's security team, worked with them during remediation, and subsequently retested the relevant access-control configuration to confirm that the identified rule had been fixed.
+
+**[View Full Case Study](./case-studies/001-mysql-access-control/)**
 
 ---
 
@@ -109,21 +123,20 @@ Areas include:
 
 ## PM AZIMELU TECHNOLOGIES
 
-Founder — PM AZIMELU TECHNOLOGIES
+**Founder — PM AZIMELU TECHNOLOGIES**
 
 PM AZIMELU TECHNOLOGIES provides cybersecurity and technology solutions focused on helping organizations secure, connect, and protect their digital environments.
 
-SECURE. CONNECT. PROTECT.
+**SECURE. CONNECT. PROTECT.**
 
 ---
 
 ## Connect
 
-GitHub: CyberAzimelu  
-Company: PM AZIMELU TECHNOLOGIES  
-Email: pmatechofficial@proton.me
+- **GitHub:** CyberAzimelu
+- **Company:** PM AZIMELU TECHNOLOGIES
+- **Email:** pmatechofficial@proton.me
 
 ---
 
 > Security is not a feature added at the end. It is a discipline built into every layer.
-
