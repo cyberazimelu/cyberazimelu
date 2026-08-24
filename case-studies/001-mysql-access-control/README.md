@@ -207,7 +207,16 @@ AUTHORIZED SOURCES
 
 - MySQL
 ---
+---
 
+## Lessons Learned
+
+- Network scanners provide valuable reconnaissance data, but their results should be correlated with host-level and configuration evidence.
+- An inconclusive service scan does not necessarily mean that a service is absent from the host.
+- Network reachability and application-level authorization are separate security controls.
+- Firewall ACLs should follow least-privilege principles and restrict access to legitimate sources.
+- Sensitive services should not have unnecessarily broad network exposure.
+- Effective VAPT involves not only identifying weaknesses, but also communicating findings, supporting remediation, and validating the resulting security improvement.
 ## Outcome
 
 The identified overly permissive firewall ACL was remediated by the organization.
