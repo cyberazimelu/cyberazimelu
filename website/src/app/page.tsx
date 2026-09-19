@@ -1,6 +1,4 @@
 import { SectionHeading } from "@/components/section-heading";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
 
 const buildServices = [
   "Professional website design and development",
@@ -41,7 +39,6 @@ function ArrowIcon() {
 export default function Home() {
   return (
     <div className="site-shell">
-      <SiteHeader />
       <main>
         <section className="hero" aria-labelledby="hero-title">
           <div className="container hero-layout">
@@ -137,7 +134,6 @@ export default function Home() {
 
         <section className="final-cta section" id="contact" aria-labelledby="final-cta-title"><div className="container final-cta-inner"><p className="eyebrow"><span className="eyebrow-line" /> Start a conversation</p><h2 id="final-cta-title">Build with intention.<br /><span>Secure with clarity.</span></h2><p>Bring the next digital idea or security question into focus.</p><div className="hero-actions" aria-label="Contact actions"><a className="button button-primary" href="mailto:info@pmazimelutechnologies.com?subject=Build%20with%20PM%20Azimelu%20Technologies">BUILD WITH US <ArrowIcon /></a><a className="button button-secondary" href="mailto:info@pmazimelutechnologies.com?subject=Secure%20my%20business%20with%20PM%20Azimelu%20Technologies">SECURE YOUR BUSINESS <ArrowIcon /></a></div></div></section>
       </main>
-      <SiteFooter />
     </div>
   );
 }
