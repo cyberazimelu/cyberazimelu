@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -13,15 +12,11 @@ const buildServices = [
 
 const secureServices = [
   "VAPT",
-  "Penetration Testing",
-  "Web Security",
+  "Web Application Security",
   "Network Security",
   "Infrastructure Security",
   "API/Backend Security",
-  "Cloud Security",
-  "Security Assessment & Hardening",
   "Cybersecurity Training",
-  "Ethical Hacking",
 ];
 
 const capabilities = [
@@ -48,27 +43,38 @@ export default function Home() {
     <div className="site-shell">
       <SiteHeader />
       <main>
-        <section className="hero section-grid" aria-labelledby="hero-title">
-          <div className="hero-copy container">
-            <p className="eyebrow"><span className="eyebrow-line" /> PM AZIMELU TECHNOLOGIES</p>
-            <div className="hero-brand-lockup">
-              <Image src="/brand/PM AZIMELU TECH.PNG" alt="PM Azimelu Technologies" width={1456} height={720} priority sizes="(max-width: 767px) 82vw, 31rem" className="hero-logo" />
+        <section className="hero" aria-labelledby="hero-title">
+          <div className="container hero-layout">
+            <div className="hero-copy">
+              <p className="eyebrow"><span className="eyebrow-line" /> Digital systems + cybersecurity</p>
+              <p className="hero-kicker">PRODUCT DELIVERY / SECURITY PRACTICE</p>
+              <h1 id="hero-title">Build Digital.<br /><span>Secure Digital.</span><br />Move Forward.</h1>
+              <p className="hero-supporting-copy">We build digital systems and help secure them.</p>
+              <div className="hero-actions" aria-label="Primary actions">
+                <a className="button button-primary" href="#build">BUILD WITH US <ArrowIcon /></a>
+                <a className="button button-secondary" href="#secure">SECURE YOUR BUSINESS <ArrowIcon /></a>
+              </div>
+              <div className="hero-principles" aria-label="Core disciplines"><span>Digital delivery</span><span>Security engineering</span></div>
             </div>
-            <p className="hero-kicker">SECURE. CONNECT. PROTECT.</p>
-            <h1 id="hero-title">Build Digital.<br /><span>Secure Digital.</span><br />Move Forward.</h1>
-            <p className="hero-supporting-copy">PM AZIMELU TECHNOLOGIES builds digital products and helps organizations assess and strengthen the security of the systems they rely on.</p>
-            <div className="hero-actions" aria-label="Primary actions">
-              <a className="button button-primary" href="#build">BUILD WITH US <ArrowIcon /></a>
-              <a className="button button-secondary" href="#secure">SECURE YOUR BUSINESS <ArrowIcon /></a>
+            <div className="hero-visual" aria-hidden="true">
+              <div className="infrastructure-grid" />
+              <div className="network-ring network-ring-one" />
+              <div className="network-ring network-ring-two" />
+              <div className="network-link network-link-one" />
+              <div className="network-link network-link-two" />
+              <div className="network-link network-link-three" />
+              <div className="system-card system-card-build"><span>01 / APPLICATION</span><strong>BUILD</strong></div>
+              <div className="system-card system-card-secure"><span>02 / DEFENCE</span><strong>SECURE</strong></div>
+              <div className="network-core"><span>CONNECTED SYSTEMS</span></div>
+              <i className="network-node network-node-one" />
+              <i className="network-node network-node-two" />
+              <i className="network-node network-node-three" />
+              <i className="network-node network-node-four" />
+              <i className="network-node network-node-five" />
+              <i className="network-node network-node-six" />
+              <span className="network-caption caption-top">SECURE TRANSPORT</span>
+              <span className="network-caption caption-bottom">DIGITAL INFRASTRUCTURE</span>
             </div>
-          </div>
-          <div className="hero-signal" aria-hidden="true">
-            <div className="signal-orbit signal-orbit-one" />
-            <div className="signal-orbit signal-orbit-two" />
-            <div className="signal-core"><span className="signal-core-label">BUILD</span><span className="signal-core-rule" /><span className="signal-core-label signal-core-label-secure">SECURE</span></div>
-            <div className="signal-coordinate coordinate-top">01 / INTENT</div>
-            <div className="signal-coordinate coordinate-right">02 / EVIDENCE</div>
-            <div className="signal-coordinate coordinate-bottom">03 / MOMENTUM</div>
           </div>
         </section>
 
