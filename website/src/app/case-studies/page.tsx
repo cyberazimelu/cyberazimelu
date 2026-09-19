@@ -19,7 +19,7 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen bg-[#06111f] text-white">
-      <section className="mx-auto max-w-7xl px-6 pb-20 pt-20 sm:px-10 lg:px-12">
+      <section className="mx-auto max-w-7xl px-6 pb-20 pt-28 sm:px-10 lg:px-12">
         <div className="max-w-4xl">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-[#00b3a6]">
             CASE STUDIES

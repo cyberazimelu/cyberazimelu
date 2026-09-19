@@ -127,7 +127,7 @@ main {
   display: flex;
   align-items: center;
   gap: clamp(0.8rem, 1.65vw, 1.65rem);
-  min-width: 0;
+  min-width: max-content;
   margin-left: auto;
 }
 
@@ -557,7 +557,53 @@ p {
   width: 71.2%;
   transform: rotate(0);
 }
+.network-link-adjacent-one {
+  top: 34.5%;
+  left: 12%;
+  width: 20%;
+  transform: rotate(25deg);
+  opacity: 0.5;
+}
 
+.network-link-adjacent-two {
+  top: 42%;
+  left: 29%;
+  width: 42%;
+  transform: rotate(0);
+  opacity: 0.5;
+}
+
+.network-link-adjacent-three {
+  top: 34.5%;
+  left: 71%;
+  width: 20%;
+  transform: rotate(-25deg);
+  opacity: 0.5;
+}
+
+.network-link-adjacent-four {
+  top: 30%;
+  left: 11%;
+  width: 48%;
+  transform: rotate(72deg);
+  opacity: 0.4;
+}
+
+.network-link-adjacent-five {
+  top: 30%;
+  left: 89%;
+  width: 48%;
+  transform: rotate(108deg);
+  opacity: 0.4;
+}
+
+.network-link-adjacent-six {
+  top: 75%;
+  left: 14%;
+  width: 72%;
+  transform: rotate(0);
+  opacity: 0.35;
+}
 .system-card {
   position: absolute;
   z-index: 2;

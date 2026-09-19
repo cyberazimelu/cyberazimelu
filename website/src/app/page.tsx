@@ -55,11 +55,15 @@ export default function Home() {
             </div>
             <div className="hero-visual" aria-hidden="true">
               <div className="infrastructure-grid" />
-              <div className="network-ring network-ring-one" />
-              <div className="network-ring network-ring-two" />
               <div className="network-link network-link-one" />
               <div className="network-link network-link-two" />
               <div className="network-link network-link-three" />
+              <div className="network-link network-link-adjacent-one" />
+              <div className="network-link network-link-adjacent-two" />
+              <div className="network-link network-link-adjacent-three" />
+              <div className="network-link network-link-adjacent-four" />
+              <div className="network-link network-link-adjacent-five" />
+              <div className="network-link network-link-adjacent-six" />
               <div className="system-card system-card-build"><span>01 / APPLICATION</span><strong>BUILD</strong></div>
               <div className="system-card system-card-secure"><span>02 / DEFENCE</span><strong>SECURE</strong></div>
               <div className="network-core"><span>CONNECTED SYSTEMS</span></div>
