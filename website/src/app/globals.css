@@ -755,6 +755,162 @@ p {
   bottom: 6%;
   left: 7%;
 }
+/* Hero network architecture */
+
+.network-architecture {
+  position: absolute;
+  inset: 2.5%;
+  width: 95%;
+  height: 95%;
+  overflow: visible;
+}
+
+.architecture-wires path {
+  fill: none;
+  stroke: rgba(116, 226, 212, 0.52);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.architecture-wires .architecture-wire-secondary {
+  stroke: rgba(116, 226, 212, 0.2);
+  stroke-width: 1;
+  stroke-dasharray: 4 8;
+}
+
+.network-traffic circle {
+  fill: var(--teal-300);
+  filter: drop-shadow(0 0 5px rgba(116, 226, 212, 0.9));
+}
+
+.network-device {
+  fill: rgba(7, 21, 38, 0.92);
+  stroke: rgba(116, 226, 212, 0.72);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 12px rgba(57, 209, 193, 0.08));
+}
+
+.network-device .device-screen {
+  fill: rgba(5, 13, 25, 0.94);
+  stroke: rgba(116, 226, 212, 0.32);
+  stroke-width: 1;
+}
+
+.network-device text {
+  fill: var(--teal-300);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.device-laptop path {
+  fill: rgba(13, 36, 59, 0.96);
+  stroke: rgba(116, 226, 212, 0.55);
+  stroke-width: 1.5;
+}
+
+.device-desktop path {
+  fill: rgba(13, 36, 59, 0.96);
+  stroke: rgba(116, 226, 212, 0.55);
+  stroke-width: 1.5;
+}
+
+.device-phone circle {
+  fill: var(--teal-300);
+  stroke: none;
+}
+
+.server-slot {
+  fill: rgba(13, 36, 59, 0.9);
+  stroke: rgba(116, 226, 212, 0.3);
+  stroke-width: 1;
+}
+
+.device-server circle {
+  fill: var(--teal-300);
+  stroke: none;
+}
+
+.cyber-shield {
+  transform-origin: 280px 270px;
+  animation: shield-breathe 4.5s ease-in-out infinite;
+}
+
+.shield-aura {
+  fill: rgba(57, 209, 193, 0.04);
+  stroke: rgba(116, 226, 212, 0.18);
+  stroke-width: 1;
+  stroke-dasharray: 3 7;
+}
+
+.shield-outline {
+  fill: rgba(7, 21, 38, 0.96);
+  stroke: var(--teal-300);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 13px rgba(57, 209, 193, 0.25));
+}
+
+.shield-inner {
+  fill: rgba(57, 209, 193, 0.07);
+  stroke: rgba(116, 226, 212, 0.32);
+  stroke-width: 1;
+}
+
+.shield-check {
+  fill: none;
+  stroke: var(--teal-300);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 5px rgba(116, 226, 212, 0.7));
+}
+
+.cyber-shield text {
+  fill: var(--silver-400);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+.network-architecture + .caption-top,
+.network-architecture + .caption-bottom {
+  z-index: 4;
+}
+
+@keyframes shield-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+@media (max-width: 640px) {
+  .network-architecture {
+    inset: 3%;
+    width: 94%;
+    height: 94%;
+  }
+
+  .network-device text {
+    font-size: 7px;
+  }
+
+  .cyber-shield text {
+    font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-shield {
+    animation: none;
+  }
+}
 
 /* Shared section headings and pillars */
 

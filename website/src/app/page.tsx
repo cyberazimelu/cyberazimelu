@@ -54,28 +54,164 @@ export default function Home() {
               <div className="hero-principles" aria-label="Core disciplines"><span>Digital delivery</span><span>Security engineering</span></div>
             </div>
             <div className="hero-visual" aria-hidden="true">
-              <div className="infrastructure-grid" />
-              <div className="network-link network-link-one" />
-              <div className="network-link network-link-two" />
-              <div className="network-link network-link-three" />
-              <div className="network-link network-link-adjacent-one" />
-              <div className="network-link network-link-adjacent-two" />
-              <div className="network-link network-link-adjacent-three" />
-              <div className="network-link network-link-adjacent-four" />
-              <div className="network-link network-link-adjacent-five" />
-              <div className="network-link network-link-adjacent-six" />
-              <div className="system-card system-card-build"><span>01 / APPLICATION</span><strong>BUILD</strong></div>
-              <div className="system-card system-card-secure"><span>02 / DEFENCE</span><strong>SECURE</strong></div>
-              <div className="network-core"><span>CONNECTED SYSTEMS</span></div>
-              <i className="network-node network-node-one" />
-              <i className="network-node network-node-two" />
-              <i className="network-node network-node-three" />
-              <i className="network-node network-node-four" />
-              <i className="network-node network-node-five" />
-              <i className="network-node network-node-six" />
-              <span className="network-caption caption-top">SECURE TRANSPORT</span>
-              <span className="network-caption caption-bottom">DIGITAL INFRASTRUCTURE</span>
-            </div>
+  <div className="infrastructure-grid" />
+
+  <svg
+    className="network-architecture"
+    viewBox="0 0 560 560"
+    role="presentation"
+  >
+    {/* Network wires */}
+    <g className="architecture-wires">
+      <path id="wire-desktop" d="M150 135 C205 170 220 210 250 250" />
+      <path id="wire-laptop" d="M135 405 C195 370 215 325 250 290" />
+      <path id="wire-phone" d="M425 150 C370 180 350 215 310 250" />
+      <path id="wire-server" d="M430 405 C375 370 350 325 310 290" />
+
+      <path
+        className="architecture-wire-secondary"
+        d="M150 135 C280 80 380 85 425 150"
+      />
+      <path
+        className="architecture-wire-secondary"
+        d="M135 405 C260 475 365 475 430 405"
+      />
+    </g>
+
+    {/* Bidirectional network traffic */}
+    <g className="network-traffic">
+      <circle r="4">
+        <animateMotion
+          dur="3.8s"
+          repeatCount="indefinite"
+          path="M150 135 C205 170 220 210 250 250"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="4.4s"
+          repeatCount="indefinite"
+          path="M250 250 C220 210 205 170 150 135"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="4.1s"
+          repeatCount="indefinite"
+          path="M135 405 C195 370 215 325 250 290"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="4.7s"
+          repeatCount="indefinite"
+          path="M250 290 C215 325 195 370 135 405"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="3.6s"
+          repeatCount="indefinite"
+          path="M425 150 C370 180 350 215 310 250"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="4.3s"
+          repeatCount="indefinite"
+          path="M310 250 C350 215 370 180 425 150"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="4.2s"
+          repeatCount="indefinite"
+          path="M430 405 C375 370 350 325 310 290"
+        />
+      </circle>
+
+      <circle r="4">
+        <animateMotion
+          dur="4.8s"
+          repeatCount="indefinite"
+          path="M310 290 C350 325 375 370 430 405"
+        />
+      </circle>
+    </g>
+
+    {/* Desktop */}
+    <g className="network-device device-desktop">
+      <rect x="92" y="88" width="116" height="76" rx="7" />
+      <rect x="101" y="97" width="98" height="56" rx="3" className="device-screen" />
+      <path d="M126 176 H174 L184 190 H116 Z" />
+      <line x1="145" y1="181" x2="155" y2="181" />
+      <text x="150" y="122" textAnchor="middle">DESKTOP</text>
+    </g>
+
+    {/* Laptop */}
+    <g className="network-device device-laptop">
+      <rect x="75" y="362" width="118" height="68" rx="6" />
+      <rect x="84" y="371" width="100" height="49" rx="3" className="device-screen" />
+      <path d="M61 438 H207 L220 451 H48 Z" />
+      <text x="134" y="398" textAnchor="middle">LAPTOP</text>
+    </g>
+
+    {/* Phone */}
+    <g className="network-device device-phone">
+      <rect x="387" y="92" width="76" height="128" rx="12" />
+      <rect x="395" y="107" width="60" height="94" rx="5" className="device-screen" />
+      <circle cx="425" cy="210" r="3" />
+      <text x="425" y="157" textAnchor="middle">PHONE</text>
+    </g>
+
+    {/* Server / API */}
+    <g className="network-device device-server">
+      <rect x="380" y="358" width="104" height="88" rx="7" />
+      <rect x="392" y="370" width="80" height="20" rx="3" className="server-slot" />
+      <rect x="392" y="397" width="80" height="20" rx="3" className="server-slot" />
+      <circle cx="401" cy="380" r="2.5" />
+      <circle cx="401" cy="407" r="2.5" />
+      <text x="432" y="433" textAnchor="middle">SERVER / API</text>
+    </g>
+
+    {/* Central cyber shield */}
+    <g className="cyber-shield">
+      <circle cx="280" cy="270" r="76" className="shield-aura" />
+      <path
+        className="shield-outline"
+        d="M280 201
+           L331 220
+           V268
+           C331 304 309 330 280 346
+           C251 330 229 304 229 268
+           V220 Z"
+      />
+      <path
+        className="shield-inner"
+        d="M280 218
+           L315 232
+           V267
+           C315 291 301 310 280 323
+           C259 310 245 291 245 267
+           V232 Z"
+      />
+      <path
+        className="shield-check"
+        d="M261 269 L274 282 L301 251"
+      />
+      <text x="280" y="366" textAnchor="middle">SECURE CORE</text>
+    </g>
+  </svg>
+
+  <span className="network-caption caption-top">CONNECTED SYSTEMS</span>
+  <span className="network-caption caption-bottom">SECURE INFRASTRUCTURE</span>
+</div>
           </div>
         </section>
 
