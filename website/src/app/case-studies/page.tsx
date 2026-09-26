@@ -22,13 +22,8 @@ export default function CaseStudiesPage() {
       {/* INTRO */}
       <section className="relative overflow-hidden border-b border-white/10">
         <div
-          className="pointer-events-none absolute inset-0 opacity-40"
+          className="page-grid-bg pointer-events-none absolute inset-0 opacity-40"
           aria-hidden="true"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(57,209,193,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(57,209,193,0.035) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-          }}
         />
 
         <div className="pointer-events-none absolute -right-32 top-16 h-96 w-96 rounded-full bg-[#00b3a6]/10 blur-3xl" />
@@ -154,13 +149,8 @@ export default function CaseStudiesPage() {
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-12 lg:py-24">
         <div className="relative overflow-hidden rounded-3xl border border-[#39d1c1]/20 bg-[#071526] p-8 sm:p-12">
           <div
-            className="pointer-events-none absolute inset-0 opacity-25"
+            className="page-grid-bg-secondary pointer-events-none absolute inset-0 opacity-25"
             aria-hidden="true"
-            style={{
-              backgroundImage:
-                "linear-gradient(135deg, rgba(57,209,193,0.06) 1px, transparent 1px), linear-gradient(45deg, rgba(57,209,193,0.025) 1px, transparent 1px)",
-              backgroundSize: "44px 44px",
-            }}
           />
 
           <div className="relative">

@@ -3,6 +3,8 @@ import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
+export const dynamic = "force-dynamic";
+
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://pmazimelutechnologies.com";
 

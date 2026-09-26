@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -34,13 +33,9 @@ export function SiteHeader() {
           href="/"
           aria-label="PM Azimelu Technologies home"
         >
-          <Image
+          <img
             src="/brand/PM AZIMELU TECH.PNG"
             alt="PM Azimelu Technologies"
-            width={1456}
-            height={720}
-            sizes="(max-width: 960px) 8.5rem, 10.25rem"
-            priority
             className="header-logo"
           />
         </Link>

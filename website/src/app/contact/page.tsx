@@ -20,13 +20,8 @@ export default function ContactPage() {
       {/* INTRO */}
       <section className="relative overflow-hidden border-b border-white/10">
         <div
-          className="pointer-events-none absolute inset-0 opacity-40"
+          className="page-grid-bg pointer-events-none absolute inset-0 opacity-40"
           aria-hidden="true"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(57,209,193,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(57,209,193,0.035) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-          }}
         />
 
         <div
@@ -169,13 +164,8 @@ export default function ContactPage() {
       <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-10 lg:px-12 lg:pb-24">
         <div className="relative overflow-hidden rounded-3xl border border-[#39d1c1]/20 bg-[#071526] p-8 sm:p-12 lg:p-14">
           <div
-            className="pointer-events-none absolute inset-0 opacity-25"
+            className="page-grid-bg-secondary pointer-events-none absolute inset-0 opacity-25"
             aria-hidden="true"
-            style={{
-              backgroundImage:
-                "linear-gradient(135deg, rgba(57,209,193,0.06) 1px, transparent 1px), linear-gradient(45deg, rgba(57,209,193,0.025) 1px, transparent 1px)",
-              backgroundSize: "44px 44px",
-            }}
           />
 
           <div className="relative">
@@ -199,7 +189,7 @@ export default function ContactPage() {
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#39d1c1] transition hover:text-white"
               >
                 BACK TO HOME
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">в†’</span>
               </Link>
             </div>
           </div>

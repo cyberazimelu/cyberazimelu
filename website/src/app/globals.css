@@ -1842,3 +1842,26 @@ p {
     box-shadow: 0 0 0 0.45rem rgba(57, 209, 193, 0.04), 0 0 1.2rem rgba(57, 209, 193, 0.52);
   }
 }
+.contact-grid-bg,
+.page-grid-bg {
+  background-image:
+    linear-gradient(rgba(57, 209, 193, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 209, 193, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.contact-grid-bg-secondary,
+.page-grid-bg-secondary {
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(57, 209, 193, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      45deg,
+      rgba(57, 209, 193, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 44px 44px;
+}
