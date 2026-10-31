@@ -5,67 +5,42 @@ import { SiteHeader } from "@/components/site-header";
 
 export const dynamic = "force-dynamic";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://pmazimelutechnologies.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://pmazimelutechnologies.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-
   title: {
-    default: "PM AZIMELU TECHNOLOGIES | Secure. Connect. Protect.",
+    default: "PM AZIMELU TECHNOLOGIES | Digital Solutions & Cybersecurity",
     template: "%s | PM AZIMELU TECHNOLOGIES",
   },
-
-  description:
-    "PM AZIMELU TECHNOLOGIES builds digital systems and helps organizations secure them through professional development, cybersecurity, VAPT, and digital security services.",
-
+  description: "PM AZIMELU TECHNOLOGIES builds digital solutions and helps businesses secure their websites, applications, networks, and infrastructure.",
   applicationName: "PM AZIMELU TECHNOLOGIES",
-
-  authors: [
-    {
-      name: "Peter Majesty Azimelu",
-    },
-  ],
-
+  authors: [{ name: "Peter Majesty Azimelu" }],
   creator: "PM AZIMELU TECHNOLOGIES",
   publisher: "PM AZIMELU TECHNOLOGIES",
-
-  alternates: {
-    canonical: "/",
-  },
-
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "PM AZIMELU TECHNOLOGIES | Secure. Connect. Protect.",
+    title: "PM AZIMELU TECHNOLOGIES | Digital Solutions & Cybersecurity",
     description: "Build Digital. Secure Digital. Move Forward.",
     url: "/",
     siteName: "PM AZIMELU TECHNOLOGIES",
     type: "website",
     locale: "en_US",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "PM AZIMELU TECHNOLOGIES | Secure. Connect. Protect.",
+    title: "PM AZIMELU TECHNOLOGIES | Digital Solutions & Cybersecurity",
     description: "Build Digital. Secure Digital. Move Forward.",
   },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <a className="skip-link" href="#main-content">Skip to content</a>
+        <SiteHeader />{children}<SiteFooter />
       </body>
     </html>
   );
