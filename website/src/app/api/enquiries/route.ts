@@ -427,19 +427,31 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const origin = request.headers.get("origin");
+const origin = request.headers.get("origin");
+const requestOrigin = new URL(request.url).origin;
+const fetchSite = request.headers.get("sec-fetch-site");
 
-  if (
-    !origin ||
-    origin !== new URL(request.url).origin ||
-    request.headers.get("sec-fetch-site") === "cross-site"
-  ) {
-    return json(
-      "We could not verify this form submission. Please reload the page and try again.",
-      403,
-      { kind: "invalid_request" },
-    );
-  }
+if (
+  !origin ||
+  origin !== requestOrigin ||
+  fetchSite === "cross-site"
+) {
+  console.warn("[PMAT ENQUIRY ORIGIN CHECK]", {
+    originPresent: Boolean(origin),
+    originMatches: origin === requestOrigin,
+    fetchSite,
+    requestOrigin,
+    forwardedHost: request.headers.get("x-forwarded-host"),
+    host: request.headers.get("host"),
+    forwardedProto: request.headers.get("x-forwarded-proto"),
+  });
+
+  return json(
+    "We could not verify this form submission. Please reload the page and try again.",
+    403,
+    { kind: "invalid_request" },
+  );
+}
 
   // Global limit: all same-origin POST attempts.
   // Maximum 30 requests in a rolling 10-minute window.
