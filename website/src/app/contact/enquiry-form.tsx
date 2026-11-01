@@ -32,7 +32,8 @@ type TurnstileOptions = {
   appearance: "execute";
   callback: (token: string) => void;
   "expired-callback": () => void;
-  "error-callback": () => void;
+  "timeout-callback": () => void;
+  "error-callback": (errorCode: number) => void;
 };
 
 type TurnstileApi = {
@@ -113,7 +114,21 @@ export function EnquiryForm({
           );
         },
 
-        "error-callback": () => {
+        "timeout-callback": () => {
+          setTurnstileToken("");
+          setVerificationStarted(false);
+          setState("error");
+          setMessage(
+            "The security check timed out. Please try again."
+          );
+
+          if (widgetIdRef.current && window.turnstile) {
+            window.turnstile.reset(widgetIdRef.current);
+          }
+        },
+
+        "error-callback": (errorCode) => {
+          console.warn("Cloudflare Turnstile error:", errorCode);
           setTurnstileToken("");
           setVerificationStarted(false);
           setState("error");
