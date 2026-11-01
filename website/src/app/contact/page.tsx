@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { EnquiryForm } from "@/app/contact/enquiry-form";
 import { ENQUIRY_CONTEXTS } from "@/lib/enquiry-options";
+import { isEnquiryDeliveryConfigured } from "@/lib/enquiry-mail";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -10,8 +12,11 @@ export const metadata: Metadata = {
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ service?: string | string[] }> }) {
   const params = await searchParams;
+  const requestHeaders = await headers();
   const requestedContext = typeof params.service === "string" ? params.service : "";
   const initialService = ENQUIRY_CONTEXTS[requestedContext];
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() ?? "";
+  const deliveryConfigured = isEnquiryDeliveryConfigured();
 
   return (
     <main id="main-content" className="inner-page">
@@ -32,8 +37,13 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
             </div>
           </div>
           <div className="enquiry-form-panel">
-            <p className="delivery-notice" role="note">Online enquiry delivery is not configured yet. Please email <a href="mailto:info@pmazimelutechnologies.com">info@pmazimelutechnologies.com</a> for a response.</p>
-            <EnquiryForm initialService={initialService} />
+            {!deliveryConfigured && <p className="delivery-notice" role="status">The online enquiry form is temporarily unavailable while its secure delivery service is configured. Please email <a href="mailto:info@pmazimelutechnologies.com">info@pmazimelutechnologies.com</a> for a response.</p>}
+            <EnquiryForm
+              initialService={initialService}
+              siteKey={siteKey}
+              nonce={requestHeaders.get("x-nonce") ?? undefined}
+              deliveryConfigured={deliveryConfigured}
+            />
           </div>
         </div>
       </section>
