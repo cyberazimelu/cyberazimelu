@@ -8,6 +8,7 @@ import {
   HostingerMailApiError,
   sendEnquiryEmail,
 } from "@/lib/enquiry-mail";
+import { isAllowedEnquiryOrigin } from "@/lib/enquiry-origin";
 
 export const runtime = "nodejs";
 
@@ -20,7 +21,6 @@ const EMAIL_LIMIT = 2;
 const GLOBAL_WINDOW_MS = 10 * 60 * 1000;
 const GLOBAL_LIMIT = 30;
 const MAX_EMAIL_RATE_LIMIT_KEYS = 2000;
-
 const SITEVERIFY_URL =
   "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
@@ -427,31 +427,15 @@ export async function POST(request: NextRequest) {
     );
   }
 
-const origin = request.headers.get("origin");
-const requestOrigin = new URL(request.url).origin;
-const fetchSite = request.headers.get("sec-fetch-site");
-
-if (
-  !origin ||
-  origin !== requestOrigin ||
-  fetchSite === "cross-site"
-) {
-  console.warn("[PMAT ENQUIRY ORIGIN CHECK]", {
-    originPresent: Boolean(origin),
-    originMatches: origin === requestOrigin,
-    fetchSite,
-    requestOrigin,
-    forwardedHost: request.headers.get("x-forwarded-host"),
-    host: request.headers.get("host"),
-    forwardedProto: request.headers.get("x-forwarded-proto"),
-  });
-
-  return json(
-    "We could not verify this form submission. Please reload the page and try again.",
-    403,
-    { kind: "invalid_request" },
-  );
-}
+  const originHeader = request.headers.get("origin");
+  const fetchSite = request.headers.get("sec-fetch-site");
+  if (!isAllowedEnquiryOrigin(originHeader, fetchSite)) {
+    return json(
+      "We could not verify this form submission. Please reload the page and try again.",
+      403,
+      { kind: "invalid_request" },
+    );
+  }
 
   // Global limit: all same-origin POST attempts.
   // Maximum 30 requests in a rolling 10-minute window.
@@ -630,7 +614,7 @@ if (
   }
 
   return json(
-    "Your enquiry has been sent. We will be in touch.",
+    "Your enquiry was accepted by our email service. Inbox delivery is not confirmed, so please email info@pmazimelutechnologies.com for an urgent enquiry.",
     200,
     { kind: "success" },
   );

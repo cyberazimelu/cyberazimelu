@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SITE_URL } from "@/lib/site-url";
 
 export const dynamic = "force-dynamic";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://pmazimelutechnologies.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "PM AZIMELU TECHNOLOGIES | Digital Solutions & Cybersecurity",
     template: "%s | PM AZIMELU TECHNOLOGIES",

@@ -1,10 +1,9 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://pmazimelutechnologies.com";
+import { SITE_URL } from "@/lib/site-url";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/", disallow: "/api/" },
-    sitemap: new URL("/sitemap.xml", siteUrl).toString(),
+    sitemap: new URL("/sitemap.xml", SITE_URL).toString(),
   };
 }

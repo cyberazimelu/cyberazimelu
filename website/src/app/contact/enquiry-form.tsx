@@ -244,7 +244,7 @@ export function EnquiryForm({
       setState("success");
       setMessage(
         result.message ??
-          "Your enquiry has been sent. We will be in touch."
+          "Your enquiry was accepted by our email service. Inbox delivery is not confirmed, so please email info@pmazimelutechnologies.com for an urgent enquiry."
       );
 
       form.reset();
